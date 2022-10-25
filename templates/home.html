@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+<!-- page title -->
+  {%block pageTitle%}Anomalies Project Home {%endblock%}
+
+<!-- page header -->
+{%block headerTitle%}
+<header>
+	<nav class="navbar navbar-default navbar-general">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="logo" href="">
+					<img class="img-responsive " alt="Tele" src="static\image\logo.png"/>
+				</a>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right"></ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+      <div class="hero" >
+        <div class="hero-filter">
+          <div class="container">
+          <div class="main-heading vertical-align">
+						<h1>Explorez les anomalies relevées par nos utilisateurs</h1>
+					</div>
+        </div>
+      </div>
+        <img src="/static/image/h12.jpg">
+    </div>
+  <!-- <h1 class="bounce-in-top fw-bolder"><span>A</span>nomalie Paris</h1> -->
+{%endblock%}
+
+<!-- body content -->
+{%block Content%}
+  <div class="homeContent">
+    <div class="container">
+      <div class="row">
+        <div class="colHome col-md-3 col-lg-3 mx-auto mt-5 p-3 rounded  slide-in-elliptic-top-fwd bg-opacity-75 text-bg-dark text-center">
+          <p>
+            Quelles sont les années pour lesquelles il y a le plus / le moins d’anomalies signalées par arrondissement ?
+          </p>
+          <a href="/question1" class="btn btn-outline-light" role="button">One</a>
+        </div>
+  
+        <div class="colHome col-md-3 col-lg-3 mx-auto mt-5 p-3 rounded slide-in-elliptic-top-fwd bg-opacity-75 text-bg-dark text-center">
+          <p>
+            Quels sont les mois pour lesquels il y a le plus / le moins d’anomalies signalées, par type d’anomalie ?
+          </p>
+          <a href="/question2" class="btn btn-outline-light" role="button">Two</a>
+        </div>
+  
+        <div class="colHome col-md-3 col-lg-3 mx-auto mt-3 mt-5 p-3 rounded slide-in-elliptic-top-fwd bg-opacity-75  text-bg-dark text-center">
+          <p>
+            Quel(s) arrondissement(s) comportent le plus / le moins d’anomalies signalées, par type d’anomalies ?
+          </p>
+          <a href="/question3" class="btn btn-outline-light" role="button">Three</a>
+        </div>
+      </div>
+
+      <!-- image -->
+      <div class="row mt-5 pt-5">
+        <div class="col-md-5 col-lg-8 mx-auto mt-3 mt-3 text-dark" data-aos="fade-right" data-aos-duration="1000">
+          <h5 class="text-center m-3 fs-4">Nos Clients</h5>
+          <div class = 'client'>
+              <p>
+                <img src="static/image/mairie.png" width = "120" height = "120"  alt="img-mail" class="rounded-circle" />
+                Mairie de Paris</br>
+                <img src="static/image/dmr.png" width = "120" height = "120"  alt="img-mail" class="rounded-circle" />
+                Dans Ma Rue
+              </p>
+          </div>
+  
+          <h5 class="text-center m-3 fs-4">A propose de Nous</h5>
+          <p>
+            Nous sommes une équipe pluridisciplinaire de développeurs multi-talentueux à votre service.
+            <br> <br>
+            Nous collectons, organisons, analysons et valorisons vos données pour vous accompagner dans la création de valeur ajoutée.
+          </p>
+        </div>
+        <div class="col-md-5 col-lg-4 mx-auto mt-3" data-aos="fade-left" data-aos-duration="1000">
+          <div class="homeImg">
+            <img src="https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=1600" class="shadow-sm" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    AOS.init();
+  </script>
+{% endblock %}
+
+
+
+
+{%block Footer %}
+{% load bootstrap_icons %}
+<footer class="text-center text-lg-start text-white" style="background: rgba(0, 0, 0, 0.2)" >
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Links -->
+    <section>
+      <!--Grid row-->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 foot-p">
+          <h6 class="text-uppercase mb-4 font-weight-bold">
+            NOTRE CLIENT: 
+          </h6>
+          <P>Mairie de Paris</P>
+          <p>Dans Ma Rue ⓒ</p>
+          <!-- Mention License -->
+          <!--  “ [Nom de la base de donnée], [Producteur de la base de donnée], [date],
+             sous licence ODbL.” 
+             (par exemple, “Eclairage public - Mairie de Paris, 23/02/2018, sous license ODbL”). -->
+          <a href="https://opendata.paris.fr/explore/dataset/dans-ma-rue/export/?disjunctive.type&disjunctive.soustype&disjunctive.code_postal&disjunctive.ville&disjunctive.arrondissement&disjunctive.prefixe&disjunctive.conseilquartier&disjunctive.intervenant">
+          <h6 class="text-uppercase mb-4 font-weight-bold">
+            Dans Ma Rue - Anomalies signalées - Mairie de Paris
+          </p>Données sous licence : Open Database License (ODbL)
+          </h6>
+        </a>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none" />
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-white foot-p">
+          <h6 class="text-uppercase mb-4 font-weight-bold "></h6>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none" />
+
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none" />
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 foot-p">
+          <h6 class="text-uppercase mb-4 font-weight-bold">App Development Team</h6>
+          <p>Gabriel D.</p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 foot-p">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+          <!-- Facebook -->
+          <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #3b5998"
+              href="#!"
+              role="button"
+              ><i class="bi bi-facebook"></i
+            ></a>
+
+          <!-- Twitter -->
+          <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #55acee"
+              href="#!"
+              role="button"
+              ><i class="bi bi-twitter"></i
+            ></a>
+
+          <!-- Google -->
+          <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #dd4b39"
+              href="#!"
+              role="button"
+              ><i class="bi bi-google"></i
+            ></a>
+
+          <!-- Instagram -->
+          <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #ac2bac"
+              href="#!"
+              role="button"
+              ><i class="bi bi-instagram"></i
+            ></a>
+
+          <!-- Linkedin -->
+          <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #0082ca"
+              href="#!"
+              role="button"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          <!-- Github -->
+          <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #333333"
+              href="#!"
+              role="button"
+              ><i class="bi bi-github"></i
+            ></a>
+        </div>
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+    © 2022 Copyright:
+    <a class="text-white" href="/home"
+        > <span class="foot-p">Anomalie Paris Project and All right Reserved </span></a
+      >
+  </div>
+  <!-- Copyright -->
+</footer>
+{%endblock%}
